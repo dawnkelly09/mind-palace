@@ -25,3 +25,23 @@ a {
   text-decoration: none;
 }
 
+form {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+input {
+  border-radius: 6px;
+}
+
+textarea {
+  border-radius: 6px;
+}
+
+button {
+  border-radius: 12px;
+  margin: 1rem;
+  padding: 0.5rem;
+}
+
