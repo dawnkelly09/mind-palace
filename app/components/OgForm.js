@@ -4,29 +4,33 @@ import { useState } from 'react';
 function OgForm({ onSubmit }) {
     const [title, setTitle] = useState('');
     const [type, setType] = useState('');
-    const [image, setImage] = useState('');
+    const [imageUrl, setImage] = useState('');
     const [description, setDescription] = useState('');
-    const [url, setUrl] = useState('');
+    const [linkUrl, setUrl] = useState('');
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-        const formData ={
+        const formData = {
             title: event.target.title.value,
-            description: event.target.description.value,
+            type: event.target.type.value,
             imageUrl: event.target.imageUrl.value,
+            description: event.target.description.value,
+            linkUrl: event.target.linkUrl.value,
         };
 
+        console.log(formData);
+    
         const response = await fetch('/api/generate-og', {
             method: 'POST',
             headers: {
-              'Content-Type': 'application/json',
+                'Content-Type': 'application/json',
             },
             body: JSON.stringify(formData),
-          });
+        });
         
-          const data = await response.json();
-          console.log(data.message); 
-        // You can also clear the form here if needed
+        const data = await response.json();
+        console.log(data.message);
+        // Clear form fields after submission
         setTitle('');
         setType('');
         setImage('');
@@ -62,7 +66,7 @@ function OgForm({ onSubmit }) {
                 type="text"
                 id="imageUrl"
                 name="imageUrl"
-                value={image}
+                value={imageUrl}
                 onChange={(e) => setImage(e.target.value)}
                 placeholder="Image URL"
                 required
@@ -76,14 +80,14 @@ function OgForm({ onSubmit }) {
                 placeholder="Description"
                 required
             />
-            <label htmlFor="url">URL: </label>
+            <label htmlFor="linkUrl">URL: </label>
             <input
                 type="text"
-                id="url"
-                name="url"
-                value={url}
+                id="linkUrl"
+                name="linkUrl"
+                value={linkUrl}
                 onChange={(e) => setUrl(e.target.value)}
-                placeholder="URL"
+                placeholder="Link URL"
                 required
             />
             <button type="submit">Create OG Content</button>
