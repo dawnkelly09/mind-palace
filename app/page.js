@@ -10,7 +10,7 @@ export default function Home() {
     <main>
       <section>
         <div>
-          <h1>Welcome to Mind Palace</h1>
+          <h1>Welcome to Mind Palace 🧠 🏰</h1>
           <h2>Better learning for everyone</h2>
           <p>Get ready for a multi-media, spatially driven learning experience</p>
         </div>
