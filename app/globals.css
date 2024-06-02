@@ -28,7 +28,9 @@ a {
 form {
   display: flex;
   flex-direction: column;
+  margin: auto;
   padding: 1rem;
+  max-width: 65%;
 }
 
 input {
@@ -45,3 +47,29 @@ button {
   padding: 0.5rem;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+.offerings-container {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  max-width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.italic {
+  font-style: italic;
+}

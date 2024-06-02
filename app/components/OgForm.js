@@ -41,6 +41,8 @@ function OgForm({ onSubmit }) {
 
     return (
         <form onSubmit={handleSubmit}>
+            <h1>OG Maker</h1>
+            <h2>Use this form to create og ready html files</h2>
             <label htmlFor="title">Title: </label>
             <input
                 type="text"

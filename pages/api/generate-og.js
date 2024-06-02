@@ -25,7 +25,9 @@ export default async function handler(req, res) {
                 <h1>${title}</h1>
                 <p>${description}</p>
                 <img src="${imageUrl}" alt="${title}" />
-                <span>${linkUrl}</span>
+                <a href="${linkUrl}">
+                    <span>Click for video</span>
+                </a>
             </body>
             </html>
         `;
