@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import './globals.css';
 import OgForm from "./components/OgForm";
-import Cover from "../public/bos-web-cover.png"
+
 
 
 export default function Home() {
@@ -22,7 +22,7 @@ export default function Home() {
           <p className="italic">Walk thru of how I used bos-web-component to add a React webcam package to NEAR components</p>
           <Link href="https://www.tldraw.com/ro/w0P0esGHuQ4mV3c9d6zZA?v=-144,-667,5064,3736&p=z3JX94s4dvotSQxptSBy3" target="_blank">
             <Image 
-              src={ Cover }
+              src="https://bafybeibajlmtr2xehts3lxgnhrffxak3iy73kztid5oprkbvwcnbypijlu.ipfs.w3s.link/bos-web-cover.png"
               width={640}
               height={300}
               alt="bos-web-component canvas"
